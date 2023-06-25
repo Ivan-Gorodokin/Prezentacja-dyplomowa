@@ -13,7 +13,6 @@ import { ProsAndConsComponent } from './components/pros-and-cons/pros-and-cons.c
 import { UsecasesComponent } from './components/usecases/usecases.component';
 import { SummaryComponent } from './components/summary/summary.component';
 import { NavigationArrowComponent } from './components/navigation-arrow/navigation-arrow.component';
-import { StockComponentComponent } from './components/stock-component/stock-component.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -29,16 +28,11 @@ import { FooterComponent } from './components/footer/footer.component';
     UsecasesComponent,
     SummaryComponent,
     NavigationArrowComponent,
-    StockComponentComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

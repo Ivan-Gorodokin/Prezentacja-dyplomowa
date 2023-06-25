@@ -1,74 +1,15 @@
 <div class="container-fluid">
-  <div class="row d-flex">
-    <div class="col-auto">
+  <div class="row d-flex" *ngFor="let row of ProgramsData">
+    <div class="col-auto" *ngFor="let column of row">
       <div class="card">
-        <img src="../../../assets/Home IO.png" class="card-img-top" />
+        <img [src]="column.imgSrc" class="card-img-top" />
         <div class="card-body">
-          <p class="card-title">Realgames Home I/O</p>
+          <p class="card-title">{{ column.cardTitle }}</p>
           <!-- <p class="card-subtitle"> -->
           <!-- Lorem ipsum dolor sit amet, consectetur adipisicing.
           </p> -->
           <p class="card-text">
-            Trójwymiarowy symulator inteligentnego domu jednorodzinnego wraz z
-            otaczającym terenem wyposażony w 174 urządzenia takie jak:
-            oświetlenie, rolety, grzejniki, termostaty, czujniki, alarmy i in.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-auto">
-      <div class="card">
-        <!-- <img src="../../../assets/beckhoff-v2.png" class="card-img-top" /> -->
-        <!-- <img src="../../../assets/Beckhoff_Logo.svg.png" class="card-img-top" /> -->
-        <!-- <img
-          src="../../../assets/beckhoff-twincat-logo.jpg"
-          class="card-img-top"
-        /> -->
-        <!-- <img src="../../../assets/tc1000__web_preview.png" class="card-img-top" /> -->
-        <img src="../../../assets/bhf_twincat_2013.png" class="card-img-top" />
-        <div class="card-body">
-          <p class="card-title">Beckhoff TwinCAT3</p>
-          <!-- <p class="card-subtitle"> -->
-          <!-- Lorem ipsum dolor sit amet, consectetur adipisicing.
-          </p> -->
-          <p class="card-text">
-            Soft PLC na bazie zasobów sprzętowych komputera PC pozwalające na
-            tworzenie, edycję i uruchomienie programów automatyki zgodnych ze
-            standardem IEC 61131-3.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row d-flex">
-    <div class="col-auto">
-      <div class="card">
-        <img src="../../../assets/kepserver.jpeg" class="card-img-top" />
-        <div class="card-body">
-          <p class="card-title">Kepware KEPServerEXv6</p>
-          <!-- <p class="card-subtitle"> -->
-          <!-- Lorem ipsum dolor sit amet, consectetur adipisicing.
-          </p> -->
-          <p class="card-text">
-            Serwer OPC wyposażony w liczne sterowniki komunikacyjne dla
-            integracji sprzętu większości wiodących producentów urządzeń
-            automatyki w spójny system sterowania.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-auto">
-      <div class="card">
-        <img src="../../../assets/OPC.png" class="card-img-top" />
-        <div class="card-body">
-          <p class="card-title">OPC DA</p>
-          <!-- <p class="card-subtitle"> -->
-          <!-- Lorem ipsum dolor sit amet, consectetur adipisicing.
-          </p> -->
-          <p class="card-text">
-            Jeden ze standardów komunikacji w branży automatyki i kontroli
-            procesów, służący do wymiany danych pomiędzy różnymi systemami i
-            urządzeniami
+            {{ column.cardText }}
           </p>
         </div>
       </div>
