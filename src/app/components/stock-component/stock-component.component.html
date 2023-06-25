@@ -1,12 +1,23 @@
-<!-- <p class="header">header here</p> -->
 <app-header></app-header>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-1 default-el">1</div>
-        <div class="col default-el">
-            <router-outlet>2</router-outlet>
+  <div class="row">
+    <div class="col-1 default-el">1</div>
+
+    <div class="col app-body">
+      <div class="row slidename">
+        <div class="col">
+          {{ slideName }}
         </div>
-        <div class="col-1 default-el">3</div>
+      </div>
+
+      <div class="row">
+        <div class="col default-el">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
     </div>
+
+    <div class="col-1 default-el">3</div>
+  </div>
 </div>
-<p class="footer">footer here</p>
+<app-footer></app-footer>

@@ -1,0 +1,32 @@
+@import "../../theme";
+
+* {
+  height: 5vh;
+  background-color: $colorAccentPW;
+  margin: 0px;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+}
+
+.col-10,
+.col-2 {
+  height: 5vh;
+  background-color: $colorAccentPW;
+  margin: 0px;
+  justify-content: space-around;
+  align-content: center;
+}
+
+img {
+  object-fit: contain;
+  max-height: 5vh;
+}
+
+.navbar-brand {
+  margin-left: 40px;
+  margin-right: 0px;
+}

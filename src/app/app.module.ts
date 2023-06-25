@@ -15,6 +15,7 @@ import { SummaryComponent } from './components/summary/summary.component';
 import { NavigationArrowComponent } from './components/navigation-arrow/navigation-arrow.component';
 import { StockComponentComponent } from './components/stock-component/stock-component.component';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HeaderComponent } from './components/header/header.component';
     SummaryComponent,
     NavigationArrowComponent,
     StockComponentComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
