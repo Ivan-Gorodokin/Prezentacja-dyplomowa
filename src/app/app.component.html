@@ -1,12 +1,16 @@
 <app-header></app-header>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-1 default-el">1</div>
+    <div class="col-1 default-el">
+      <app-navigation-arrow
+        [type]="navArrowType.previous"
+      ></app-navigation-arrow>
+    </div>
 
     <div class="col app-body">
       <div class="row slidename">
         <div class="col">
-          {{ slideName }}
+          {{ this.navService.currentSlideNameSignal() }}
         </div>
       </div>
 
@@ -17,7 +21,9 @@
       </div>
     </div>
 
-    <div class="col-1 default-el">3</div>
+    <div class="col-1 default-el">
+      <app-navigation-arrow [type]="navArrowType.next"></app-navigation-arrow>
+    </div>
   </div>
 </div>
 <app-footer></app-footer>

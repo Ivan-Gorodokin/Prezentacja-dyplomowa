@@ -9,7 +9,7 @@
   // border-style: solid;
   // min-height: 80vh;
   text-align: center;
-  min-height: 90vh;
+  height: 85vh;
 
   //   display: flex;
   //   align-items: center;
@@ -27,4 +27,13 @@ router-outlet {
   height: 10vh;
   display: flex;
   align-items: center;
+}
+
+app-navigation-arrow {
+  display: flex;
+  justify-content: center;
+  // align-items:
+  border: 5px;
+  border-style: solid;
+  margin: 0px;
 }

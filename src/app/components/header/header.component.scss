@@ -1,12 +1,46 @@
 @import "../../theme";
 
 nav {
-    min-height: 5vh;
-    background-color: $colorAccentPW;
-    margin: 0px;
+  min-height: 10vh;
+  background-color: $colorAccentPW;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar-toggler {
+  margin-right: 20px;
+  border: none;
+  &:active {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+// .navbar-text {
+//   padding: 0px;
+// }
+
+.autor {
+  font-weight: bold;
+  font-size: 20px;
+  // font-size: 14px;
+}
+
+.autor,
+.tytul {
+  margin-left: 40px;
+  margin-right: 0px;
+  color: $colorMainPW;
+  display: block;
+}
+
+// font-size: 24px;
+.tytul {
+  font-size: 20px;
+  // font-size: 14px;
 }
 
 img {
-    
-    max-height: 5vh;
+  object-fit: contain;
+  max-height: 5vh;
 }

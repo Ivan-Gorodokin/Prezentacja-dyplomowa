@@ -1,4 +1,4 @@
-$cardDimensions: 35vh;
+$cardDimensions: 32vh;
 
 .row {
   //   height: 35vh;
@@ -14,32 +14,26 @@ $cardDimensions: 35vh;
   padding: 0px;
 }
 
-.card-img-top {
-  width: (0.8 * $cardDimensions);
-  height: (0.8 * $cardDimensions) / 2;
-  // width: 300px;
-  // height: 150px;
-  object-fit: contain;
-}
-
 .card {
   display: flex;
   align-items: center;
   justify-content: baseline;
   text-align: left;
-  width: $cardDimensions;
+  width: 1.2 * $cardDimensions;
   height: $cardDimensions;
-  margin: 20px;
+  margin: 20px 24px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-// .card-body {
-//   padding: 25px;
-// }
+.card-img-top {
+  width: (0.8 * $cardDimensions);
+  height: (0.8 * $cardDimensions) / 2;
+  object-fit: contain;
+}
 
 .card-title {
-  font-weight: bold;
   font-size: 20px;
+  font-weight: bold;
 }
 
 .card-text {
