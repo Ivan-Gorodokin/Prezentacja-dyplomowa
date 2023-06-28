@@ -1,0 +1,23 @@
+.container-fluid {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  margin-top: 5rem;
+  width: 60vw;
+}
+
+td {
+  width: 30vw;
+  text-align: left;
+  &[colspan="2"] {
+    text-align: center;
+  }
+}
+
+svg {
+  margin-left: 20px;
+  margin-right: 10px;
+}

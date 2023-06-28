@@ -1,21 +1,17 @@
 <div class="navigation-body">
-  <!-- <button (click)="navigateToPrevious()">Previous</button>
-  <button (click)="navigateToNext()">Next</button> -->
   <button
+    class="bi bi-caret-left-fill"
     *ngIf="
       this.navService.currentSlideIndexSignal() != 0 && this.type == 'previous'
     "
     (click)="navigateToPrevious()"
-  >
-    Previous
-  </button>
+  ></button>
   <button
+    class="bi bi-caret-right-fill"
     *ngIf="
       this.navService.currentSlideIndexSignal() !=
         this.navService.TotalNumberOfSlides - 1 && this.type == 'next'
     "
     (click)="navigateToNext()"
-  >
-    Next
-  </button>
+  ></button>
 </div>

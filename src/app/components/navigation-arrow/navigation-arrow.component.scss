@@ -1,3 +1,6 @@
+@import "../../theme";
+
+$dimension: (1/12) * 100vw;
 .navigation-body {
   height: 85vh;
   display: flex;
@@ -6,6 +9,12 @@
 }
 
 button {
+  padding: 0;
   display: block;
-  height: 15vh;
+  width: $dimension;
+  height: $dimension;
+  font-size: 60px;
+  color: $colorMainPW;
+  background-color: transparent;
+  border-style: none;
 }

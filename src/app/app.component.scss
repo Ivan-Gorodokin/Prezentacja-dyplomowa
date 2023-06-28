@@ -1,17 +1,16 @@
 @import "../app/theme";
 * {
   background-color: $slideBackgroundColor;
+  color: $colorMainPW;
 }
 
 .app-body {
   height: $bodyHeight;
   text-align: center;
-  //   align-items: center;
-  //   justify-content: center;
 }
 
 router-outlet {
-  display: flex;
+  // display: flex;
 }
 
 .slidename {
@@ -20,15 +19,11 @@ router-outlet {
   align-items: center;
   font-size: 30px;
   font-weight: 500;
-  // color: $colorMainPW;
-  color: #3d3c4c;
+  color: $colorMainPW;
 }
 
 app-navigation-arrow {
   display: flex;
   justify-content: center;
-  // align-items:
-  /*   border: 5px;
-  border-style: solid; */
   margin: 0px;
 }
