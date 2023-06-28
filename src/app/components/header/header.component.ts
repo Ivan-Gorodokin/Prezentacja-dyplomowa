@@ -12,7 +12,7 @@ import {
 export class HeaderComponent implements OnInit {
   public navList: NavigationServiceData[] = [];
 
-  constructor(private navService: NavigationService) {}
+  constructor(public navService: NavigationService) {}
 
   ngOnInit(): void {
     this.navList = this.navService.NavList;

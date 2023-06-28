@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-1 default-el">
+    <div class="col-1">
       <app-navigation-arrow
         [type]="navArrowType.previous"
       ></app-navigation-arrow>
@@ -18,13 +18,13 @@
       </div>
 
       <div class="row">
-        <div class="col default-el">
+        <div class="col">
           <router-outlet></router-outlet>
         </div>
       </div>
     </div>
 
-    <div class="col-1 default-el">
+    <div class="col-1">
       <app-navigation-arrow [type]="navArrowType.next"></app-navigation-arrow>
     </div>
   </div>

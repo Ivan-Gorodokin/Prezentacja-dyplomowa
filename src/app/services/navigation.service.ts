@@ -19,6 +19,7 @@ export class NavigationService implements OnInit {
     { address: 'frontpage', slideName: 'Strona Tytułowa' },
     { address: 'cel_pracy', slideName: 'Cel pracy' },
     { address: 'komponenty_programowe', slideName: 'Komponenty programowe' },
+    { address: 'home_io', slideName: 'Symulator Home I/O' },
     {
       address: 'scenariusze_automatyzacji',
       slideName: 'Scenariusze Automatyzacji',
@@ -75,8 +76,6 @@ export class NavigationService implements OnInit {
 
   updateStateOnRefresh(url: string): void {
     if (this.currentSlideIndexSignal() != 0) return;
-    // const url = this.route.snapshot.url;
-    // console.log(url);
     console.log('updateStateOnRefresh()');
     this.currentSlideIndexSignal.update(() => this.findIndexByUrl(url));
   }

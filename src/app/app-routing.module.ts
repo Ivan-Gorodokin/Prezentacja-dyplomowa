@@ -8,12 +8,14 @@ import { ProjectDemoComponent } from './components/project-demo/project-demo.com
 import { ProsAndConsComponent } from './components/pros-and-cons/pros-and-cons.component';
 import { UsecasesComponent } from './components/usecases/usecases.component';
 import { SummaryComponent } from './components/summary/summary.component';
+import { HomeIoComponent } from './components/home-io/home-io.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'frontpage', pathMatch: 'full' },
   { path: 'frontpage', component: FrontpageComponent },
   { path: 'cel_pracy', component: GoalComponent },
   { path: 'komponenty_programowe', component: ProgramsComponent },
+  { path: 'home_io', component: HomeIoComponent },
   { path: 'scenariusze_automatyzacji', component: ScenariosComponent },
   { path: 'demo', component: ProjectDemoComponent },
   { path: 'wady_i_zalety', component: ProsAndConsComponent },

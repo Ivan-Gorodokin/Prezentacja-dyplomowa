@@ -4,22 +4,13 @@
 }
 
 .app-body {
-  // background-color: $slideBackgroundColor;
-  // border-color: darkblue;
-  // border-style: solid;
-  // min-height: 80vh;
+  height: $bodyHeight;
   text-align: center;
-  height: 85vh;
-
-  //   display: flex;
   //   align-items: center;
   //   justify-content: center;
 }
 
 router-outlet {
-  // min-height: 80vh;
-  border-color: brown;
-  // min-height: 1vh;
   display: flex;
 }
 
