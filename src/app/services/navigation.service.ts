@@ -1,6 +1,5 @@
 import { Injectable, OnInit, computed, signal } from '@angular/core';
-import { Router } from '@angular/router';
-import { BehaviorSubject, Subject, tap } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 export interface NavigationServiceData {
   address: string;
@@ -15,9 +14,6 @@ export class NavigationService implements OnInit {
   public currentSlideNameSignal = computed<string>(
     () => this.NavList[this.currentSlideIndexSignal()].slideName
   );
-  private currentSlideIndex = 0;
-  private currentSlideIndex$ = new BehaviorSubject<number>(0);
-  private currentSlideName$ = new BehaviorSubject<string>('');
 
   private navList: NavigationServiceData[] = [
     { address: 'frontpage', slideName: 'Strona Tytułowa' },
@@ -27,7 +23,6 @@ export class NavigationService implements OnInit {
       address: 'scenariusze_automatyzacji',
       slideName: 'Scenariusze Automatyzacji',
     },
-    // { address: 'projektowanie_systemu', slideName: 'Projektowanie systemu' },
     { address: 'demo', slideName: 'Demonstracja pracy systemu' },
     { address: 'wady_i_zalety', slideName: 'Wady i zalety symulatora' },
     {
@@ -38,73 +33,51 @@ export class NavigationService implements OnInit {
   ];
 
   ngOnInit() {
-    this.currentSlideIndex$
-      .pipe(
-        tap((index) => {
-          this.currentSlideName$.next(this.NavList[index].slideName);
-          console.log(index);
-        })
-      )
-      .subscribe((index) => (this.currentSlideIndex = index));
-
-    console.log('oninit');
+    // this.currentSlideIndexSignal = signal<number>(0);
+    console.log('>>> >>> >>> >>> >>> oninit');
   }
 
-  constructor(private router: Router) {}
-
-  get CurrentSlideIndex(): BehaviorSubject<number> {
-    return this.currentSlideIndex$;
-  }
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   get TotalNumberOfSlides(): number {
     return this.navList.length;
   }
 
-  get SlideName(): BehaviorSubject<string> {
-    return this.currentSlideName$;
-  }
-
   get NavList(): NavigationServiceData[] {
-    return this.navList /* .map() */;
+    return this.navList;
   }
 
-  navigateToNextSlide(/* currentSlideAddress: string */): void {
-    // let currentIndex = this.navList.findIndex(
-    //   (item) => item.slideName == currentSlideAddress
-    // );
+  navigateToNextSlide(): void {
     this.router.navigate([
       this.navList[this.currentSlideIndexSignal() + 1].address,
     ]);
-    // this.currentSlideIndex$.next(this.currentSlideIndex + 1);
     this.currentSlideIndexSignal.update((value) => value + 1);
     console.log(this.currentSlideIndexSignal());
   }
 
-  navigateToPreviousSlide(/* currentSlideAddress: string */): void {
-    // let currentIndex = this.navList.findIndex(
-    //   (item) => item.slideName == currentSlideAddress
-    // );
+  navigateToPreviousSlide(): void {
     this.router.navigate([
       this.navList[this.currentSlideIndexSignal() - 1].address,
     ]);
-    // this.currentSlideIndex$.next(this.currentSlideIndex - 1);
     this.currentSlideIndexSignal.update((value) => value - 1);
     console.log(this.currentSlideIndexSignal());
   }
 
   navigateToSlideNr(slideNr: number): void {
     this.router.navigate([this.navList[slideNr].address]);
-    // this.currentSlideIndex$.next(slideNr);
     this.currentSlideIndexSignal.update(() => slideNr);
-    console.log(this.currentSlideIndex);
     console.log(this.currentSlideIndexSignal());
   }
 
-  isFirstSlide(): boolean {
-    return this.currentSlideIndex == 0;
+  findIndexByUrl(url: string): number {
+    return this.navList.findIndex((item) => item.address == url) || 0;
   }
 
-  isLastSlide(): boolean {
-    return this.currentSlideIndex == this.NavList.length + 1;
+  updateStateOnRefresh(url: string): void {
+    if (this.currentSlideIndexSignal() != 0) return;
+    // const url = this.route.snapshot.url;
+    // console.log(url);
+    console.log('updateStateOnRefresh()');
+    this.currentSlideIndexSignal.update(() => this.findIndexByUrl(url));
   }
 }

@@ -27,13 +27,17 @@ router-outlet {
   height: 10vh;
   display: flex;
   align-items: center;
+  font-size: 30px;
+  font-weight: 500;
+  // color: $colorMainPW;
+  color: #3d3c4c;
 }
 
 app-navigation-arrow {
   display: flex;
   justify-content: center;
   // align-items:
-  border: 5px;
-  border-style: solid;
+  /*   border: 5px;
+  border-style: solid; */
   margin: 0px;
 }

@@ -10,8 +10,7 @@ import { UsecasesComponent } from './components/usecases/usecases.component';
 import { SummaryComponent } from './components/summary/summary.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: 'frontpage'},
-  { path: '', component: FrontpageComponent },
+  { path: '', redirectTo: 'frontpage', pathMatch: 'full' },
   { path: 'frontpage', component: FrontpageComponent },
   { path: 'cel_pracy', component: GoalComponent },
   { path: 'komponenty_programowe', component: ProgramsComponent },

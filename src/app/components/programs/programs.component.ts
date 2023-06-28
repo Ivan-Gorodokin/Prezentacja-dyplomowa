@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
   selector: 'app-programs',
   templateUrl: './programs.component.html',
   styleUrls: ['./programs.component.scss'],
 })
-export class ProgramsComponent {
+export class ProgramsComponent implements OnInit {
   public ProgramsData = [
     [
       {
@@ -37,4 +39,14 @@ export class ProgramsComponent {
       },
     ],
   ];
+
+  constructor(
+    public navService: NavigationService,
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit() {
+    const url = this.route.snapshot.url[0].path;
+    this.navService.updateStateOnRefresh(url);
+  }
 }

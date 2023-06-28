@@ -14,14 +14,6 @@ export class NavigationArrowComponent {
   public lastPage = false;
   constructor(public navService: NavigationService) {}
 
-  isFirstPage(): void {
-    this.navService.isFirstSlide();
-  }
-
-  isLastPage(): void {
-    this.navService.isLastSlide();
-  }
-
   navigateToPrevious(): void {
     this.navService.navigateToPreviousSlide();
   }

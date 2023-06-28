@@ -1,1 +1,17 @@
-<p>usecases works!</p>
+<div class="container-fluid d-flex">
+  <div class="row equal d-flex">
+    <div class="col d-flex" *ngFor="let column of columns">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-title">{{ column.title }}</p>
+          <!-- <p class="card-text">
+            {{ column.text }}
+          </p> -->
+          <ul class="card-text" *ngFor="let position of column.text">
+            <li>{{ position }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

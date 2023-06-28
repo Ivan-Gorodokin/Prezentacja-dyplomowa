@@ -8,7 +8,10 @@
     </div>
 
     <div class="col app-body">
-      <div class="row slidename">
+      <div
+        class="row slidename"
+        [hidden]="this.navService.currentSlideIndexSignal() == 0"
+      >
         <div class="col">
           {{ this.navService.currentSlideNameSignal() }}
         </div>

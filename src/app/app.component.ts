@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   ActivatedRoute,
   ActivatedRouteSnapshot,
@@ -12,28 +12,14 @@ import { navArrowType } from 'src/app/shared/enum/navArrowType';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit, OnChanges {
+export class AppComponent {
   title = 'prezentacja_dyplomowa';
   slideName = '';
   navArrowType = navArrowType;
 
   constructor(
     public navService: NavigationService,
-    private router: Router,
-    private routeParams: ActivatedRoute
+    // private router: Router,
+    private route: ActivatedRoute // private snapshot: ActivatedRouteSnapshot
   ) {}
-
-  ngOnInit() {
-    // console.log('this.routeParams');
-    // console.log(this.routeParams);
-    this.navService.SlideName.subscribe((slideName) => {
-      this.slideName = slideName;
-      console.log(slideName);
-    });
-  }
-
-  ngOnChanges() {
-    console.log(this.navService.isFirstSlide);
-    console.log(this.navService.isLastSlide);
-  }
 }
