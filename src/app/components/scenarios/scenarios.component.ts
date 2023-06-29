@@ -38,6 +38,7 @@ export class ScenariosComponent implements OnInit {
       'alarm przeciwwłamaniowy - aktywacja (z opóźnieniem 30-sekundowym) od czujników ruchu lub otwarcia drzwi gdy aktywowano alarm z panelu; efekt: aktywacja syreny, włączenie świateł, opuszczenie rolet.',
     ],
   ];
+
   ngOnInit() {
     const url = this.route.snapshot.url[0].path;
     this.navService.updateStateOnRefresh(url);
