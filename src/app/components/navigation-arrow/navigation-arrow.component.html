@@ -1,5 +1,6 @@
-<div class="navigation-body">
+<div class="navigation-body" matRipple>
   <button
+    matRipple
     class="bi bi-caret-left-fill"
     *ngIf="
       this.navService.currentSlideIndexSignal() != 0 && this.type == 'previous'
@@ -7,6 +8,7 @@
     (click)="navigateToPrevious()"
   ></button>
   <button
+    matRipple
     class="bi bi-caret-right-fill"
     *ngIf="
       this.navService.currentSlideIndexSignal() !=

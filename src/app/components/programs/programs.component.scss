@@ -1,4 +1,4 @@
-$cardDimensions: 32vh;
+$cardDimensions: 35vh;
 
 .row {
   //   height: 35vh;
@@ -21,7 +21,8 @@ $cardDimensions: 32vh;
   text-align: left;
   width: 1.2 * $cardDimensions;
   height: $cardDimensions;
-  margin: 20px 24px;
+  // margin: 20px 24px;
+  margin: 10px 12px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 

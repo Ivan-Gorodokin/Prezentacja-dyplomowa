@@ -16,6 +16,7 @@ import { NavigationArrowComponent } from './components/navigation-arrow/navigati
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeIoComponent } from './components/home-io/home-io.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,12 @@ import { HomeIoComponent } from './components/home-io/home-io.component';
     FooterComponent,
     HomeIoComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

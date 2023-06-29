@@ -1,0 +1,19 @@
+@import "../../theme";
+
+// span.mdc-tab-indicator__content {
+//   border-top-color: $colorMainPW;
+//   border-bottom-color: $colorMainPW;
+//   border-left-color: $colorMainPW;
+//   border-right-color: $colorMainPW;
+// }
+
+ul,
+mat-tab-group {
+  margin-top: 5rem;
+}
+
+li {
+  font-size: 1.2rem;
+  text-align: left;
+  padding-bottom: 0.5rem;
+}

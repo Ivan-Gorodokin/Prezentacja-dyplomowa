@@ -1,1 +1,24 @@
-<p>scenarios works!</p>
+<mat-tab-group
+  animationDuration="0ms"
+  [backgroundColor]="'primary'"
+  (selectedIndexChange)="selectedIndexChange($event)"
+>
+  <mat-tab label="Światła">
+    <ng-container *ngTemplateOutlet="scenariosTemplate"></ng-container>
+  </mat-tab>
+  <mat-tab label="Rolety">
+    <ng-container *ngTemplateOutlet="scenariosTemplate"></ng-container>
+  </mat-tab>
+  <mat-tab label="Ogrzewanie">
+    <ng-container *ngTemplateOutlet="scenariosTemplate"></ng-container>
+  </mat-tab>
+  <mat-tab label="Alarmy">
+    <ng-container *ngTemplateOutlet="scenariosTemplate"></ng-container>
+  </mat-tab>
+</mat-tab-group>
+
+<ng-template #scenariosTemplate>
+  <ul>
+    <li *ngFor="let item of scenarios[currentIndex()]">{{ item }}</li>
+  </ul>
+</ng-template>
