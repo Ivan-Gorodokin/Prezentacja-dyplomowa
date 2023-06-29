@@ -9,7 +9,7 @@ export interface NavigationServiceData {
 @Injectable({
   providedIn: 'root',
 })
-export class NavigationService implements OnInit {
+export class NavigationService {
   public currentSlideIndexSignal = signal<number>(0);
   public currentSlideNameSignal = computed<string>(
     () => this.NavList[this.currentSlideIndexSignal()].slideName
@@ -32,11 +32,6 @@ export class NavigationService implements OnInit {
     },
     { address: 'podsumowanie', slideName: 'Podsumowanie' },
   ];
-
-  ngOnInit() {
-    // this.currentSlideIndexSignal = signal<number>(0);
-    console.log('>>> >>> >>> >>> >>> oninit');
-  }
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 

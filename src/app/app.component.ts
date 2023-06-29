@@ -17,9 +17,5 @@ export class AppComponent {
   slideName = '';
   navArrowType = navArrowType;
 
-  constructor(
-    public navService: NavigationService,
-    // private router: Router,
-    private route: ActivatedRoute // private snapshot: ActivatedRouteSnapshot
-  ) {}
+  constructor(public navService: NavigationService) {}
 }
